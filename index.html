@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <h1>Pneumonia Detection</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+        <h1>Pneumonia Detection Project</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#causes">Causes</a></li>
+                <li><a href="#effects">Effects</a></li>
+                <li><a href="#symptoms">Symptoms</a></li>
+                <li><a href="#precautions">Precautions</a></li>
+                <li><a href="#treatment">Treatment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Welcome to Our Project!</h2>
+        <p>This project uses machine learning algorithms to detect pneumonia from medical imaging data. It leverages Flask and Keras to deliver an easy-to-use web application.</p>
+        <p>Click the button below to scroll down for more information.</p>
+
+        <h2>Understanding Pneumonia</h2>
+
+        <!-- Causes of Pneumonia -->
+        <section id="causes" class="card">
+            <h3>Causes of Pneumonia</h3>
+            <img src="static/images/causes.jpg" alt="Causes of Pneumonia" class="section-image">
+            <p>Pneumonia is a serious infection of the lungs caused by bacteria, viruses, fungi, or other pathogens. The most common causes include:</p>
+            <ul>
+                <li><strong>Bacterial Infection:</strong> Bacteria like *Streptococcus pneumoniae* and *Haemophilus influenzae* can lead to pneumonia.</li>
+                <li><strong>Viral Infection:</strong> Viruses such as the flu virus, respiratory syncytial virus (RSV), and COVID-19 can cause pneumonia.</li>
+                <li><strong>Fungal Infection:</strong> Fungi in the environment can cause pneumonia, especially in immunocompromised individuals.</li>
+                <li><strong>Aspiration Pneumonia:</strong> This occurs when food, liquid, or vomit is inhaled into the lungs.</li>
+                <li><strong>Inhalation of Toxic Substances:</strong> Inhalation of toxic gases or smoke can damage the lungs and cause pneumonia.</li>
+            </ul>
+        </section>
+
+        <!-- Serious Effects of Pneumonia on the Body -->
+        <section id="effects" class="card">
+            <h3>Serious Effects on the Body After Pneumonia</h3>
+            <img src="static/images/effects.jpg" alt="Serious Effects of Pneumonia" class="section-image">
+            <p>Pneumonia can have serious effects on the body, especially if left untreated. Some of the common complications include:</p>
+            <ul>
+                <li><strong>Sepsis:</strong> Pneumonia can lead to sepsis, a life-threatening infection in the bloodstream.</li>
+                <li><strong>Organ Failure:</strong> Severe pneumonia can result in organ failure, particularly in the kidneys and heart.</li>
+                <li><strong>Lung Abscess:</strong> A pocket of pus can form in the lungs, requiring surgical drainage.</li>
+                <li><strong>Respiratory Failure:</strong> In extreme cases, pneumonia can cause respiratory failure, where the lungs are unable to provide enough oxygen to the body.</li>
+                <li><strong>Chronic Health Problems:</strong> Some individuals, particularly older adults, may experience long-term lung damage and difficulty breathing even after recovery.</li>
+            </ul>
+        </section>
+
+        <!-- Symptoms of Pneumonia -->
+        <section id="symptoms" class="card">
+            <h3>Symptoms of Pneumonia</h3>
+            <img src="static/images/symptoms.jpg" alt="Symptoms of Pneumonia" class="section-image">
+            <p>The symptoms of pneumonia can vary depending on the cause and severity of the infection. Common symptoms include:</p>
+            <ul>
+                <li><strong>Fever:</strong> A high fever is often one of the first signs of pneumonia.</li>
+                <li><strong>Cough:</strong> A persistent cough, which may produce phlegm, is common.</li>
+                <li><strong>Shortness of Breath:</strong> Difficulty breathing and rapid shallow breathing can occur.</li>
+                <li><strong>Chest Pain:</strong> Sharp or stabbing chest pain that worsens with deep breathing or coughing is common.</li>
+                <li><strong>Fatigue:</strong> Feeling unusually tired or weak is another common symptom of pneumonia.</li>
+            </ul>
+        </section>
+
+        <!-- Precautions to Take -->
+        <section id="precautions" class="card">
+            <h3>Precautions We Can Take</h3>
+            <img src="static/images/precautions.jpg" alt="Precautions for Pneumonia" class="section-image">
+            <p>To prevent pneumonia and reduce the risk of infection, you can follow these precautions:</p>
+            <ul>
+                <li><strong>Vaccination:</strong> Get vaccinated against pneumonia-causing bacteria like *Streptococcus pneumoniae* and the flu virus.</li>
+                <li><strong>Hand Hygiene:</strong> Wash your hands frequently with soap and water, especially after coughing or sneezing.</li>
+                <li><strong>Avoid Smoking:</strong> Smoking damages the lungs and increases the risk of respiratory infections.</li>
+                <li><strong>Boost Immunity:</strong> Eat a healthy diet, exercise regularly, and get enough sleep to keep your immune system strong.</li>
+                <li><strong>Avoid Close Contact:</strong> Stay away from people who are sick, especially those with respiratory infections.</li>
+            </ul>
+        </section>
+
+        <!-- What to Do When You Are Suffering from Pneumonia -->
+        <section id="treatment" class="card">
+            <h3>What to Do When You Are Suffering from Pneumonia</h3>
+            <img src="static/images/what to do .jpg" alt="What to Do During Pneumonia" class="section-image">
+            <p>If you suspect you have pneumonia, it is crucial to seek medical attention. Here’s what to do:</p>
+            <ul>
+                <li><strong>Consult a Doctor:</strong> Get a medical evaluation to confirm the diagnosis and begin treatment.</li>
+                <li><strong>Rest and Hydrate:</strong> Drink plenty of fluids and get enough rest to help your body fight the infection.</li>
+                <li><strong>Follow the Treatment Plan:</strong> Take prescribed medications, including antibiotics or antivirals, as instructed by your doctor.</li>
+                <li><strong>Avoid Self-Medicating:</strong> Do not take over-the-counter medications without consulting a healthcare professional.</li>
+                <li><strong>Monitor Symptoms:</strong> Keep track of your symptoms, and seek emergency care if you experience severe difficulty breathing or chest pain.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Scroll Button -->
+    <button class="scroll-btn">Scroll Down</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Pneumonia Detection Project</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

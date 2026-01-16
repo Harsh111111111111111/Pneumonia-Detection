@@ -8,6 +8,26 @@ The model is trained to detect  whether the victim/patient is suffering from Pne
 This project uses a Convolutional Neural Network (CNN) to detect pneumonia from chest X-ray images.
 Model trained separately and loaded into Flask web application.
 
+This project is a PAID offering.
+
+The trained CNN model file (.h5), complete runnable setup,
+and full access are provided ONLY after successful payment.
+
+Price: ₹2,499 (one-time)
+
+Payment is required before sharing:
+- Trained model file
+- Private download access
+- Setup & execution support
+
+To proceed with payment and access, please contact via email.
+
+📧 Email: harshlavaniya11@gmail.com
+
+Note:
+No files or links will be shared without payment.
+The model is intentionally kept private to prevent misuse.
+
 ### How to Run
 
 pip install -r requirements.txt  
